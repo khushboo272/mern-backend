@@ -2,6 +2,7 @@
 import express from "express";
 import connectDB from "./config/db.js";
 import userRouter from "./routes/userRoutes.js";
+import bycrpt from "bcrypt"
 const app=express();
 const startServer=async()=>{
     try {

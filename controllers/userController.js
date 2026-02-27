@@ -37,4 +37,11 @@ const login = async(req,res)=>{
         return res.status(404).json({message : "User not found"})
     }
 }
-export {addUser,showUsers,deleteUser,login};
+const update=async(req,res)=>
+{
+    const id=req.params.id;
+    const product=req.body;
+    const result=await userModel.findByIdAndUpdate(id.product);
+    res.status(200).json(product)
+}
+export {addUser,showUsers,deleteUser,login,update};
